@@ -4,7 +4,8 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
-import { Single } from "./views/single";
+import { SingleCharacter } from "./views/singleCharacter";
+import { SinglePlanet } from "./views/singlePlanet";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -24,7 +25,8 @@ const Layout = () => {
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/demo" element={<Demo />} />
-						<Route path="/single/:theid" element={<Single />} />
+						<Route path="/planet/:theid" element={<SinglePlanet />} />
+						<Route path="/character/:theid" element={<SingleCharacter />} /> {/* uid is a number, is not related to the API*/}
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />
